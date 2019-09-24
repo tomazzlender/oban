@@ -65,7 +65,8 @@ defmodule Oban.Migrations do
     import Oban.Migrations.Macros
 
     def up(prefix) do
-      execute "CREATE SCHEMA IF NOT EXISTS #{prefix}"
+      # skip this line because most of the setups don't have permissions needed to run it
+      # execute "CREATE SCHEMA IF NOT EXISTS #{prefix}"
 
       execute """
       DO $$
